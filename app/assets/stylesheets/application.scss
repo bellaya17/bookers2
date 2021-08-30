@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap";
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
+
+*{
+  box-sizing: border-box;
+ }
+ 
+ .box {
+   margin: 0 auto;
+ }
+ 
+ 
+ 
+ .btn-block {
+  display: block;
+}
+
+.btn-sm {
+  padding: 0.25rem 0.5rem;
+  line-height: 1.5;
+  border-radius : 0.2rem;
+  
+}
+.btn-info {
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+.btn-success {
+  color : #fff;
+  background-color: #28a745;
+  border-color: #28a745;
+}
+

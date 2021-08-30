@@ -1,0 +1,24 @@
+
+<h2>User info</h2>
+<img></img>
+
+<table>
+  <tbody>
+    <tr></tr>
+    <tr>
+      <th>name</th>
+      <th></th>
+    </tr>
+  </tbody>
+   <%= link_to 'マイページ', user_path(current_user.id) %>
+</table>
+
+<h2>New book</h2>
+<%= form_with model: @book, local:true do |f| %>
+
+  <label>Title</label>
+  <%= f.string_field :title %>
+  <label>Opinion</label>
+  <%= f.text_field :opinion %>
+  <%= f.submit 'Create Book' %>
+<% end %>
