@@ -1,19 +1,18 @@
-<div class="box">
-  <h2>User info</h2>
-<%= form_with(@user, url: user_path(current_user.id)) do |f| %>
+<h2>User info</h2>
+  <%= form_with model:@user, url: user_path(current_user.id) do |f| %>
+    <%= render 'books/error', model: @user %>
+      <h4>Name</h4>
+      <%= f.text_field :name %>
 
-  <h4>Name</h4>
-  <%= f.string_field :name %>
-  <h4>Image</h4>
-  <%= f.attachment_field :profile_image %>
-  <h4>Introduction</h4>
-  <%= f.text_area :introduction %>
-  
-  <%= f.submit 'Update User' %>
-  
-<% end %>
+      <h4>Image</h4>
+      <%= f.attachment_field :profile_image, placeholder: "プロフィール画像" %>
 
-</div>
+      <h4>Introduction</h4>
+      <%= f.text_area :introduction %>
+
+      <%= f.submit 'Update User' %>
+
+  <% end %>
 
 
 
