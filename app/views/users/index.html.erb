@@ -17,13 +17,13 @@
               <tbody>
                 <% @users.each do |user| %>
                   <tr>
-                      <td><%= attachment_image_tag @user, :profile_image, :fill, 40, 40, fallback: "no_image.jpg"%></td>
-                      <td><%= @user.name %></td>
+                      <td><%= attachment_image_tag @user, :profile_image, :fill, 40, 40, fallback: "no_image.jpg", size:'40x40'%></td>
+                      <td><%= user.name %></td>
                       <td><%= link_to "Show", "/users/#{user.id}" %></td>
                   </tr>
                 <% end %>
               </tbody>
             </table>
         </div>
-    </div>                                          
+    </div>
 </div>
